@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="quiz demo" content="quiz">
+	<title>
+		quiz web app
+	</title>
+	<link rel="stylesheet"  href="style.css">
+	<!-- icon link -->
+	<script src="https://kit.fontawesome.com/a2029513e1.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+	<!-- start quiz button -->
+   <div class="start_btn"><button>Start Quiz</button></div>
+
+   <!-- information box -->
+   <div class="info_box">
+   	<div class="info_title">
+   		<span>SOME RULES OF QUIZ</span>
+   	</div>
+   	<div class="info_points">
+   		<div class="info">1. you have only <span>15 seconds</span> for each question</div>
+   		<div class="info">2. once you select the answer you can't reselect</div>
+   		<div class="info">3. you can't select any option if time goes off</div>
+   		<div class="info">4. you can't exit to the quiz while playing</div>
+   		<div class="info">5. you will get point basis on the correct answers</div>
+   	</div>
+   	<div class="Btn">
+   		<button class="exit">Exit Quiz</button>
+   		<button class="continue">Continue</button>
+   	</div>
+   </div>
+
+   <!-- quiz-box -->
+   <div class="quiz_box">
+	   <header>
+		   <div class="title">QUIZ Application</div>
+		   <div class="timer">
+			   <div class="time_text">Time left:</div>
+			   <div class="time_sec">15</div>
+		   </div>
+	   </header>
+	   <section>
+		   <div class="ques_text">
+			   <span>What does HTML stands for?</span>
+		   </div>
+		   <div class="option_list">
+			<div class="option">
+				<span>Hyper Text Preprocessor</span>
+				<div class="icon tick"><i class="fas fa-check"></i></div>
+			</div>
+			<div class="option">
+				<span>Hyper Text Markup Langurage</span>
+				<div class="icon wrong"><i class="fas fa-times"></i></div>
+			</div>
+			<div class="option">
+				<span>Hyper Text Multiple Language</span>
+				<div class="icon"></div>
+			</div>
+			<div class="option">
+				<span>Hyper Tool Multiple Language</span>
+				<div class="icon"></div>
+			</div>
+		   </div>
+	   </section>
+
+	   <!-- quiz box footer -->
+	   <footer>
+		   <div class="total_ques">
+			   <span><p>2</p>Of<p>5</p>Question</span>
+		   </div>
+		   <button class="next_btn">Next&nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+	   </footer>
+   </div>
+
+
+</body>
+</html>
