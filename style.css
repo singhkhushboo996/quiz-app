@@ -13,11 +13,13 @@ body{
 	background-attachment: fixed;
 	background-size: 100% 100%;
 }
-.start_btn ,.info_box ,.quiz_box{
+.start_btn ,.info_box ,.quiz_box ,.result_box{
 	position: absolute;
 	left: 50%;
 	top:50%;
 	transform: translate(-50% ,-50%);
+	box-shadow: 0px 4px 8px 0 rgba( 0,0,0, 0.2)
+				0px 6px 20px 0 rgba( 0,0,0, 0.19);
 }
 
 /*start button styling*/
@@ -29,15 +31,21 @@ body{
 	outline:none;
 	border: solid ;
 	border-radius: 10px;
-	background-color: rgb(20, 35, 236);
+	background-color: rgb(6, 96, 240);
 	cursor: pointer;
 }
+.start_btn button:hover{
+	background:rgb(81, 138, 230) ;
+}
+
   /*information box*/
 .info_box{
-
 	width:600px;
 	background-color: white;
 	border-radius: 10px;
+	pointer-events: none;
+	opacity: 0;
+	transform: translate(-50% -50%) scale(0.9);
 }
 .info_box .info_title{
 	height:50px;
@@ -70,37 +78,41 @@ body{
 	 justify-content: flex-end;
  }
  .info_box .Btn button{
-	 margin: 10px 10px;
-	 background-color: blue;
+	 margin: 10px 20px;
+	 background-color:rgb(6, 96, 240);
 	 color: white;
-	 border:1px solid blue;
+	 border:1px solid rgb(6, 96, 240);
 	 font-size: 16px;
 	 font-weight: 500;
 	 cursor: pointer;
 	 border-radius: 5px;
+	 padding: 10px;
 
  }
  .Btn button.exit{
 	color:white;
-	background-color: blue; 
+	background-color:rgb(6, 96, 240); 
  }
  .Btn button.exit:hover{
-	color:blue;
-	background-color:white;
+	color:white;
+	background-color:rgb(81, 138, 230);
  }
  .Btn button.continue{
 	color:white;
-	background-color: blue; 
+	background-color:rgb(6, 96, 240); 
  }
  .Btn button.continue:hover{
-	color:blue;
-	background-color:white;
+	 color: white;
+	background-color:rgb(81, 138, 230);
  }
+ /* QUIZ BOX */
  .quiz_box{
-	 display: none;
     width:600px;
 	background-color: white;
 	border-radius: 10px;
+	pointer-events: none;
+	opacity: 0;
+	transform: translate(-50% -50%) scale(0.9);
  }
  .quiz_box header{
 	 position: relative;
@@ -236,8 +248,66 @@ footer .next_btn{
 footer .next_btn:hover{
 	background:  rgb(81, 138, 230);
 }
+/* RESULT BOX */
+.result_box{
+	background-color: white;
+	width: 500px;
+	padding: 30px;
+	border-radius: 10px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	/* pointer-events: none;
+	opacity: 0;
+	transform: translate(-50% -50%) scale(0.9); */
+}
+.result_box .icon{
+	font-size: 100px;
+	color:rgb(247, 141, 21);
+	margin-bottom: 10px;
+}
+.result_box .complete_text{
+	font-size: 25px;
+	font-weight: 600;
+}
+.result_box .score_text span{
+	display:flex;
+	margin: 10px 0;
+	font-size: 20px;
+	font-weight: 500;
 
- 
+}
+.score_text span p{
+	font-weight: 700;
+	padding: 0 5px;
+} 
+.result_box .buttons{
+	display: flex;
+	margin: 20px 0;
+	
+
+}
+.result_box .buttons button{
+	margin: 0 10px;
+	height: 40px;
+	border:1px solid rgb(6, 96, 240);
+	outline: none;
+	font-size: 18px;
+	font-weight: 500;
+	border-radius:5px;
+	background-color: rgb(6, 96, 240);
+	color: white;
+	cursor:pointer;
+	transition: all 0.3s ease;
+	padding: 0 5px;	
+}
+.result_box .buttons button:hover{
+	background:  rgb(81, 138, 230);
+}
+
+
 
 
 
