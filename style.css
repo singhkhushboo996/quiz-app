@@ -259,9 +259,9 @@ footer .next_btn:hover{
 	align-items: center;
 	flex-direction: column;
 	justify-content: space-between;
-	/* pointer-events: none;
+	pointer-events: none;
 	opacity: 0;
-	transform: translate(-50% -50%) scale(0.9); */
+	transform: translate(-50% -50%) scale(0.9);
 }
 .result_box .icon{
 	font-size: 100px;
