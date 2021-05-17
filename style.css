@@ -20,6 +20,16 @@ body{
 	transform: translate(-50% ,-50%);
 	box-shadow: 0px 4px 8px 0 rgba( 0,0,0, 0.2)
 				0px 6px 20px 0 rgba( 0,0,0, 0.19);
+	transition: all 0.3s ease;
+}
+
+.info_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult{
+	z-index: 5;
+	pointer-events: auto;
+	opacity: 1;
+	transform: translate(-50% -50%) scale(1);
 }
 
 /*start button styling*/
@@ -142,6 +152,7 @@ body{
 	border-radius: 5px;
 	padding: 0 8px;
  }
+ 
  .quiz_box header .timer .time_text{
 	 font-size: 18px;
 	 font-weight: 400;
@@ -160,9 +171,16 @@ body{
 	 border: 1px solid rgb(109, 108, 108);
 	 user-select:none;
  }
+ .quiz_box header .time_line{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 4px;
+	background:rgb(6, 96, 240);  
+  }
  .quiz_box section{
 	 padding: 25px 40px;
-	 background-color: honeydew;
+	 background-color: white;
  }
  .quiz_box section .ques_text{
 	 font-size: 30px;
@@ -212,6 +230,22 @@ body{
 	background: rgb(240, 161, 161);
 
 }
+
+.option_list .option.correct{
+	color: rgb(20, 221, 20);
+	 border-color: rgb(20, 221, 20);
+	 background: rgb(184, 231, 184);
+}
+
+.option_list .option.incorrect{
+	color: rgb(247, 10, 10);
+	border-color: rgb(247, 10, 10);
+	background: rgb(240, 161, 161);
+}
+.option_list .option.disable{
+	pointer-events: none;
+}
+
 .quiz_box footer{
 	height: 60px;
 	width: 100%;
@@ -233,6 +267,7 @@ body{
 	padding-left: 0%;
 }
 footer .next_btn{
+	display: none;
 	height: 40px;
 	padding: 0 13px;
 	font-size: 18px;
